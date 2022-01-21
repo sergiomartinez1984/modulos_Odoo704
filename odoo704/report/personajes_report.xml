@@ -1,0 +1,26 @@
+<odoo>
+    <record id="odoo704.personajes_report" model="ir.actions.report">
+        <field name="name"> Informe de personajess</field>
+        <field name="model">odoo704.personajes</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">odoo704.personajes_report_view</field>
+        <field name="report_file">odoo704.personajes_report</field>
+        <field name="binding_model_id" ref="model_odoo704_personajes"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="personajes_report_view">
+        <t t-call="web.html_container">
+            <!-- muestra datos de la empresa (salta página) -->
+            <t t-call="web.external_layout">
+                <h1>personajes</h1><br />
+                <t t-foreach="docs" t-as="personajes">
+                    <ul>
+                        <li>Nombre: <span t-field="personajes.name" /></li>
+                        <li>Videojuego: <span t-field="personajes.videojuego" /></li>
+                    </ul>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

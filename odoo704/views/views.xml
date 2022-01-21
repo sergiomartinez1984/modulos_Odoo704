@@ -1,0 +1,220 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="odoo704.videojuegos_list_view">
+      <field name="name">odoo704.videojuegos.view.tree</field>
+      <field name="model">odoo704.videojuegos</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="imagen"/>
+          <field name="precio"/>
+          <field name="date"/>
+        </tree>
+      </field>
+    </record>
+
+<!-- search -->
+
+    <record model="ir.ui.view" id="odoo704.videojuegos_search_view">
+      <field name="name">odoo704.videojuegos.view.search</field>
+      <field name="model">odoo704.videojuegos</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="imagen"/>
+          <field name="precio"/>
+          <field name="date"/>
+          <group>
+            <filter name="group_by_name" string="name" context="{'gropup_by':'name'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    
+    <!-- form -->
+    
+    <record model="ir.ui.view" id="odoo704.videojuegos_form_view">
+      <field name="name">odoo704.videojuegos.view.form</field>
+      <field name="model">odoo704.videojuegos</field>
+      <field name="arch" type="xml">
+        <form string="Información videojuegos">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                videoJuego:
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="name" placeholder="Nombre Juego"/>
+                <field name="imagen" placeholder="Imagen URL"/>
+                <field name="precio" placeholder="Precio"/>
+                <field name="date"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+
+    </record>
+
+    <!-- Definición de menús-->
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="odoo704.videojuegos_action_window">
+      <field name="name">videojuegos</field>
+      <field name="res_model">odoo704.videojuegos</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="odoo704" id="odoo704.menu_root"/>
+    <menuitem name="videojuegos" id="odoo704.menu_videojuegos" parent="odoo704.menu_root"/>
+    <menuitem name="List" id="odoo704.menu_videojuegos_list" parent="odoo704.menu_videojuegos"
+              action="odoo704.videojuegos_action_window"/>
+
+   <!--Modelo numero 2--> 
+
+       <record model="ir.ui.view" id="odoo704.personajes_list_view">
+      <field name="name">odoo704.personajes.view.tree</field>
+      <field name="model">odoo704.personajes</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="videojuego"/>
+        </tree>
+      </field>
+    </record>
+
+<!-- search -->
+
+    <record model="ir.ui.view" id="odoo704.personajes_search_view">
+      <field name="name">odoo704.personajes.view.search</field>
+      <field name="model">odoo704.personajes</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="videojuego"/>
+          <group>
+            <filter name="group_by_name" string="name" context="{'gropup_by':'name'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    
+    <!-- form -->
+    
+    <record model="ir.ui.view" id="odoo704.personajes_form_view">
+      <field name="name">odoo704.personajes.view.form</field>
+      <field name="model">odoo704.personajes</field>
+      <field name="arch" type="xml">
+        <form string="Información personajes">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                personaje:
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="name" placeholder="Nombre del personaje"/>
+                <field name="videojuego" placeholder="videojuego"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+
+    </record>
+
+    <!-- Definición de menús-->
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="odoo704.personajes_action_window">
+      <field name="name">personajes</field>
+      <field name="res_model">odoo704.personajes</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="odoo704" id="odoo704.menu_root"/>
+    <menuitem name="personajes" id="odoo704.menu_personajes" parent="odoo704.menu_root"/>
+    <menuitem name="List" id="odoo704.menu_personajes_list" parent="odoo704.menu_personajes"
+              action="odoo704.personajes_action_window"/>
+
+  <!--Modelo numero 3-->            
+
+         <record model="ir.ui.view" id="odoo704.empresa_list_view">
+      <field name="name">odoo704.empresa.view.tree</field>
+      <field name="model">odoo704.empresa</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="ubicacion"/>
+        </tree>
+      </field>
+    </record>
+
+<!-- search -->
+
+    <record model="ir.ui.view" id="odoo704.empresa_search_view">
+      <field name="name">odoo704.empresa.view.search</field>
+      <field name="model">odoo704.empresa</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="ubicacion"/>
+          <group>
+            <filter name="group_by_name" string="name" context="{'gropup_by':'name'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    
+    <!-- form -->
+    
+    <record model="ir.ui.view" id="odoo704.empresa_form_view">
+      <field name="name">odoo704.empresa.view.form</field>
+      <field name="model">odoo704.empresa</field>
+      <field name="arch" type="xml">
+        <form string="Información empresa">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                empresa:
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="name" placeholder="Nombre de la empresa"/>
+                <field name="ubicacion" placeholder="ubicacion de la empresa"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+
+    </record>
+
+    <!-- Definición de menús-->
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="odoo704.empresa_action_window">
+      <field name="name">empresa</field>
+      <field name="res_model">odoo704.empresa</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="odoo704" id="odoo704.menu_root"/>
+    <menuitem name="empresa" id="odoo704.menu_empresa" parent="odoo704.menu_root"/>
+    <menuitem name="List" id="odoo704.menu_empresa_list" parent="odoo704.menu_empresa"
+              action="odoo704.empresa_action_window"/>
+  </data>
+</odoo>

@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_odoo704_videojuegos_usuario,odoo704.videojuegos.usuario,model_odoo704_videojuegos,odoo704.group_odoo704_usuario,1,0,0,0
+access_odoo704_videojuegos_administrador,odoo704.videovideojuegos.administrador,model_odoo704_videojuegos,odoo704.group_odoo704_administrador,1,1,1,1
+
+access_odoo704_personajes_usuario,odoo704.personajes.usuario,model_odoo704_personajes,odoo704.group_odoo704_usuario,1,0,0,0
+access_odoo704_personajes_administrador,odoo704.personajes.administrador,model_odoo704_personajes,odoo704.group_odoo704_administrador,1,1,1,1
+
+access_odoo704_empresa_usuario,odoo704.empresa.usuario,model_odoo704_empresa,odoo704.group_odoo704_usuario,1,0,0,0
+access_odoo704_empresa_administrador,odoo704.empresa.administrador,model_odoo704_empresa,odoo704.group_odoo704_administrador,1,1,1,1

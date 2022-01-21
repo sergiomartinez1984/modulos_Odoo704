@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+
+          <record id="object0" model="odoo704.videojuegos">
+              <field name="name">Skyrim</field>
+              <field name="imagen">Imagen</field>
+              <field name="precio">29</field>
+              <field name="date">12/03/2015</field>
+          </record>
+
+          <record id="object1" model="odoo704.videojuegos">
+              <field name="name">Minecraft</field>
+              <field name="imagen">Imagen</field>
+              <field name="precio">25</field>
+              <field name="date">03/07/2016</field>
+          </record>
+
+
+          <record id="object2" model="odoo704.personajes">
+              <field name="name">Mario Bros</field>
+              <field name="videojuego">Saga Super Mario</field>
+          </record>
+
+          <record id="object3" model="odoo704.personajes">
+              <field name="name">Sonic</field>
+              <field name="videojuego">Sonic and hedgehog</field>
+          </record>
+
+            <record id="object4" model="odoo704.empresa">
+              <field name="name">Nintendo</field>
+              <field name="ubicacion">Kioto(Japon)</field>
+          </record>
+
+          <record id="object5" model="odoo704.empresa">
+              <field name="name">Sega</field>
+              <field name="ubicacion">Tokio(Japon)</field>
+          </record>
+
+    </data>
+</odoo>

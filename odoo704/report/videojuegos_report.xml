@@ -1,0 +1,28 @@
+<odoo>
+    <record id="odoo704.videojuegos_report" model="ir.actions.report">
+        <field name="name"> Informe de videojuegos</field>
+        <field name="model">odoo704.videojuegos</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">odoo704.videojuegos_report_view</field>
+        <field name="report_file">odoo704.videojuegos_report</field>
+        <field name="binding_model_id" ref="model_odoo704_videojuegos"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="videojuegos_report_view">
+        <t t-call="web.html_container">
+            <!-- muestra datos de la empresa (salta página) -->
+            <t t-call="web.external_layout">
+                <h1>videojuegos</h1><br />
+                <t t-foreach="docs" t-as="videojuegos">
+                    <ul>
+                        <li>Nombre: <span t-field="videojuegos.name" /></li>
+                        <li>Imagen: <span t-field="videojuegos.imagen" /></li>
+                        <li>Precio: <span t-field="videojuegos.precio" /></li>
+                        <li>Fecha: <span t-field="videojuegos.date" /></li>
+                    </ul>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
